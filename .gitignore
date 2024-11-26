@@ -6,7 +6,7 @@ __pycache__/
 *.env
 .env
 config.py
-
+!backend/app.py
 # Flask
 instance/
 *.sqlite3
