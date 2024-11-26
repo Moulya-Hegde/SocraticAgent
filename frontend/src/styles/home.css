@@ -1,0 +1,126 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* index.css */
+
+:root {
+  /* Light Mode Colors */
+  --bg-light: #f0f4f8; /* Soft light background */
+  --text-light: #333; /* Dark text */
+  --sidebar-light: #ffffff; /* Light sidebar */
+  --chat-light: #f9f9f9; /* Light chat window background */
+  --input-light: #ffffff; /* Light input background */
+  --border-light: #ccc; /* Light border */
+  --button-light: #007bff; /* Light button color */
+  --button-light-hover: #0056b3; /* Light button hover color */
+
+  /* Dark Mode Colors */
+  --bg-dark: #1a1a1a; /* Dark gray background */
+  --text-dark: #e0e0e0; /* Light gray text */
+  --sidebar-dark: #2c2c2c; /* Darker sidebar */
+  --chat-dark: #2e2e2e; /* Darker chat window */
+  --input-dark: #3a3a3a; /* Dark input background */
+  --border-dark: #555; /* Dark border */
+  --button-dark: #28a745; /* Dark button color */
+  --button-dark-hover: #218838; /* Dark button hover color */
+}
+
+/* Common Styles */
+.home-body {
+  transition: background-color 0.3s, color 0.3s;
+  
+}
+
+/* Light Mode Styles */
+.home-body {
+  background-color: var(--bg-light);
+  color: var(--text-light);
+}
+
+.sidebar {
+  background-color: var(--sidebar-light);
+}
+
+.chat-window {
+  background-color: var(--chat-light);
+}
+
+.message-input {
+  background-color: var(--input-light);
+  border: 1px solid var(--border-light);
+}
+
+/* Dark Mode Styles */
+.home-body.dark-mode {
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+.home-body.dark-mode .sidebar {
+  background-color: var(--sidebar-dark);
+}
+
+.home-body.dark-mode .chat-window {
+  background-color: var(--chat-dark);
+}
+
+.home-body.dark-mode .message-input {
+  background-color: var(--input-dark);
+  border: 1px solid var(--border-dark);
+}
+
+/* Button Styles */
+button {
+  background-color: rgb(0 0 0 / 0.1);
+  color: white;
+  transition: background-color 0.3s;
+}
+
+
+
+.home-body.dark-mode button {
+  background-color: rgb(0 0 0 / 0.1);
+}
+
+/* Remove background for the bulb icon and sidebar button */
+button.bulb-toggle,
+button.sidebar-toggle {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+button.bulb-toggle:hover,
+button.sidebar-toggle:hover {
+  color: var(--button-light);
+}
+
+.home-body.dark-mode button.bulb-toggle:hover,
+.home-body.dark-mode button.sidebar-toggle:hover {
+  color: var(--button-dark);
+}
+
+
+textarea {
+  padding-right: 100px; /* Add space for the send button */
+}
+/* ChatWindow specific overflow rules */
+.chat-window {
+  overflow-y: auto; /* Ensure vertical scroll works */
+}
+/* Add this to your CSS to define the header styles in dark mode */
+.home-body.dark-mode .header {
+  background-color: #2c2c2c; /* Dark gray or any other color */
+}
+
+.button-hover {
+  transition: transform 0.2s ease; /* Smooth transition */
+}
+
+.button-hover:hover {
+  transform: scale(1.2); /* Scale up by 5% on hover */
+}
+
+
